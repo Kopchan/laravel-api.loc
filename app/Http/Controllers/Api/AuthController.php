@@ -23,7 +23,8 @@ class AuthController extends Controller
             ...$request->validated(),
             'role_id' => $roleId
         ]);
-        $token = $user->remember_token = Str::random(100);
+      //$token = $user->remember_token = Str::random(100);
+        $token = $user->createToken('remember_token')->plainTextToken;
         $user->save();
         return response([
             'token' => $token,
