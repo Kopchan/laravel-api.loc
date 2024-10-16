@@ -20,11 +20,11 @@ php artisan key:generate
 5. Изменить файл конфигурации .env (пример для БД MySQL)
 ```env
 DB_CONNECTION=mysql
-DB_HOST=            # Домен/IP_СУБД
-DB_PORT=            # Порт_СУБД
-DB_DATABASE=        # Имя_БД
-DB_USERNAME=        # Логин_пользователя
-DB_PASSWORD=        # Пароль_пользователя
+DB_HOST=127.0.0.1       # Домен/IP_СУБД
+DB_PORT=3306            # Порт_СУБД
+DB_DATABASE=laravel     # Имя_БД
+DB_USERNAME=root        # Логин_пользователя
+DB_PASSWORD=            # Пароль_пользователя
 ```
 
 ## Пустой проект 
