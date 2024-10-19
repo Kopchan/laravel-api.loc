@@ -25,7 +25,7 @@ class AuthController extends Controller
             ...$request->validated(),
             'role_id' => $roleId
         ]);
-        $token = $user->createToken('remember_token')->plainTextToken;
+        $token = $user->createToken('api_token')->plainTextToken;
         return response([
             'token' => $token,
             'data' => UserResource::make($user),
@@ -42,7 +42,7 @@ class AuthController extends Controller
             throw new ApiException(401, 'Invalid credentials');
 
         $user = Auth::user();
-        $token = $user->createToken('remember_token')->plainTextToken;
+        $token = $user->createToken('api_token')->plainTextToken;
         return response([
             'token' => $token,
             'data' => UserResource::make($user),

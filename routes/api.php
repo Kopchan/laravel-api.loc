@@ -8,5 +8,5 @@ Route
 ->group(function () {
     Route::post('signup', 'signup');
     Route::post('login' , 'login');
-    Route::post('logout', 'logout')->middleware('auth:api');
+    Route::post('logout', 'logout')->middleware('auth:sanctum');
 });
