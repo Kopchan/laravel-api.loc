@@ -46,7 +46,7 @@ class AuthController extends Controller
         return response([
             'token' => $token,
             'data' => UserResource::make($user),
-        ], 201);
+        ]);
     }
 
 
